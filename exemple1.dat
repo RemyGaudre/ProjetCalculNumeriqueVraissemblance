@@ -1,0 +1,4 @@
+# Un exemple de matrice A de dimension 4 x 3 rentrée, colonne par colonne 
+A := <<1,0,3,1> | <0,-1,2,0> | < 2,1,-2,-2>>;
+Q := <<1,-1,0,2>>;
+
