@@ -1,0 +1,29 @@
+#!/bin/sh
+
+if [ ! -d ${HOME}/cnum ] ; then
+    cat << __EOT 2>&1
+
+    Le répertoire cnum doit être installé à la racine de votre compte
+    pour pouvoir compiler vos codes FORTRAN.
+
+__EOT
+    exit 1
+elif [ ! -f ${HOME}/cnum/libmutils/libmutils.a ] ; then
+   cat << __EOT 2>&1 
+
+   La bibliothèque ${HOME}/cnum/libmutils/libmutils.a doit être construite
+   pour pouvoir compiler vos codes FORTRAN.
+
+   Commandes à exécuter :
+
+   cd ${HOME}/cnum/libmutils
+   make
+
+__EOT
+    exit 1
+fi
+
+echo "gfortran -Wall -fimplicit-none -L${HOME}/cnum/libmutils $@ -lmutils -llapack -lblas"
+
+gfortran -Wall -fimplicit-none -L${HOME}/cnum/libmutils $@ -lmutils -llapack -lblas
+

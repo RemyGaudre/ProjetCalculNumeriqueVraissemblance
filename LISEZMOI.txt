@@ -1,0 +1,45 @@
+F. Boulier. 2012, 2016
+
+La bibliothèque fournit 
+- des utilitaires de lecture/affichage de matrices compatibles avec 
+  le format du paquetage LinearAlgebra de MAPLE (très utile pour les tests)
+- quelques fonctions utiles pour certains TP.
+
+Le répertoire cnum devrait être placé dans la racine de votre compte.
+L'utilitaire $HOME/cnum/gfor permet alors d'utiliser facilement 
+la bibliothèque $HOME/cnum/libmutils/libmutils.a
+
+Avant la première utilisation (création de libmutils.a):
+cd $HOME/cnum/libmutils
+make
+
+Quelques exemples :
+cd $HOME/cnum/exemples
+
+Quelques documents :
+$HOME/cnum/doc
+
+Les sources des BLAS et des subroutines LAPACK les plus utiles :
+$HOME/cnum/doc/BLAS
+$HOME/cnum/doc/LAPACK
+
+Quelques fonctions utiles :
+$HOME/cnum/libmutils/mutils.f 
+
+RAND_M:     Génération pseudo-aléatoire de matrice double precision 
+RAND_SYM:   Génération pseudo-aléatoire de matrice double precision symétrique 
+            avec valeurs propres fixées
+RAND_CM:    Génération pseudo-aléatoire de matrice carrée double precision
+            avec condition fixée.
+COND1_M:    Estimation de la condition d'une matrice carrée double precision.
+READ_MMRK:  Lecture de matrice double precision suivant un format Matrix Market
+PRINT_MMRK: Impression de matrice double precision suivant un format Matrix 
+            Market
+
+Fonctions de lecture / écriture au format MAPLE :
+$HOME/cnum/libmutils/maple.f
+La première lettre x = S, D, C ou I (Single, Double prec, Complex, Integer)
+
+xPRINT_MPL: Impression d'une matrice ou d'un vecteur
+xREAD_MPL:  Lecture d'une matrice ou d'un vecteur
+

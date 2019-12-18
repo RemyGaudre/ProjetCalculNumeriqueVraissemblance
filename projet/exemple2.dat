@@ -1,0 +1,2 @@
+# Un exemple de matrice A de dimension 4 x 3 rentrée, ligne par ligne
+A := <<2 | 5 | 13>, <7 | -11 | 18>, <17 | 0 | 2>, <21 | 3 | 0>>;
